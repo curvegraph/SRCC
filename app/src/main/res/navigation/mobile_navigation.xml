@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/welcomeScreen">
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.sriraghunanthancarcare.customer.ui.login.LoginFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/login_to_phone_verification"
+            app:destination="@+id/phoneNumberVerification"
+            app:popUpTo="@+id/welcomeScreen"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneNumberVerification"
+        android:name="com.sriraghunanthancarcare.customer.ui.login.PhoneVerificationFragment"
+        tools:layout="@layout/fragment_phone_verification">
+
+        <action
+            android:id="@+id/phone_to_otp_verification"
+            app:destination="@+id/otpVerification" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpVerification"
+        android:name="com.sriraghunanthancarcare.customer.ui.login.OTPFragment"
+        tools:layout="@layout/fragment_o_t_p">
+        <action
+            android:id="@+id/otp_to_add_vehicle"
+            app:destination="@id/addVehicle"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/phoneNumberVerification"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVehicle"
+        android:name="com.sriraghunanthancarcare.customer.ui.vehicle.AddVehicleFragment"
+        tools:layout="@layout/fragment_add_vehicle">
+        <action
+            android:id="@+id/add_vehicle_to_dashboard"
+            app:destination="@id/dashboard"
+            app:popUpTo="@+id/addVehicle"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.sriraghunanthancarcare.customer.ui.dashboard.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+
+</navigation>

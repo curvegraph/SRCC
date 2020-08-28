@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/marginSizeXXL"
+        android:paddingEnd="@dimen/marginSizeXXL"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWelcome"
+            style="@style/textExtraBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome"
+            android:textColor="@color/textPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/tvWelcomeMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWelcomeMessage"
+            style="@style/textRegularBig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginSize"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome_hint"
+            android:textColor="@color/textPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/phoneAuthentication"
+            app:layout_constraintEnd_toEndOf="@+id/tvWelcome"
+            app:layout_constraintStart_toStartOf="@+id/tvWelcome"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/phoneAuthentication"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/phone_number"
+            app:elevation="10dp"
+            app:icon="@drawable/ic_phone"
+            app:iconPadding="0dp"
+            android:paddingStart="@dimen/marginSizeXXL"
+            android:paddingEnd="@dimen/marginSize"
+            android:layout_marginBottom="@dimen/marginSize"
+            app:layout_constraintBottom_toTopOf="@+id/acceptPrivacyPolicy"
+            app:layout_constraintEnd_toEndOf="@+id/tvWelcomeMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/CustomShapeOverlay" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/acceptPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/viewDefaultHeight"
+            android:layout_marginBottom="@dimen/marginSize"
+            android:checkMark="@null"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawablePadding="@dimen/marginSizeS"
+            android:gravity="center_vertical"
+            android:text="I agree to the "
+            android:textColor="@color/textPrimaryDark"
+            android:theme="@style/checkedTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/privacyPolicy"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacyPolicy"
+            style="@style/textRegularBig"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/viewDefaultHeight"
+            android:gravity="center_vertical"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/acceptPrivacyPolicy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/acceptPrivacyPolicy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

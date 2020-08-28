@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "958027166967",
+    "firebase_url": "https://sr-carcare.firebaseio.com",
+    "project_id": "sr-carcare",
+    "storage_bucket": "sr-carcare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958027166967:android:3c4319555d6d16b2aacff2",
+        "android_client_info": {
+          "package_name": "com.sriraghunanthancarcare.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958027166967-3ah7l0c3f0ssoumahudap8gohsecm90l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByZFyf2uTSScTPSaQoThJPAVGhscGJ2nI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958027166967-3ah7l0c3f0ssoumahudap8gohsecm90l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
